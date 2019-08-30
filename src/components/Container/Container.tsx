@@ -18,24 +18,26 @@ class Container extends Component<{},MyState> {
         super(props);
         this.state = {
             container_num: 0,
-            container_list: [{
-                name: "Test-Container-Name",
-                type: "Test-Container-type",
-                itemsnum: 5,
-            },
-                {
-                    name: "Test-Container-Name2",
-                    type: "Test-Container-type",
-                    itemsnum: 5,
-                }, {
-                    name: "Test-Container-Name",
-                    type: "Test-Container-type",
-                    itemsnum: 5,
-                } , {
-                    name: "Test-Container-Name",
-                    type: "Test-Container-type",
-                    itemsnum: 5,
-                },]
+            container_list: [
+            //     {
+            //     name: "Test-Container-Name",
+            //     type: "Test-Container-type",
+            //     itemsnum: 5,
+            // },
+            //     {
+            //         name: "Test-Container-Name2",
+            //         type: "Test-Container-type",
+            //         itemsnum: 5,
+            //     }, {
+            //         name: "Test-Container-Name",
+            //         type: "Test-Container-type",
+            //         itemsnum: 5,
+            //     } , {
+            //         name: "Test-Container-Name",
+            //         type: "Test-Container-type",
+            //         itemsnum: 5,
+            //     },
+            ]
         }
     }
     
@@ -60,12 +62,12 @@ class Container extends Component<{},MyState> {
         // const listConts = this.state.container_list.map((ele, index) =>
         //     <li key={index}>{ele.name}<br />{ele.itemsnum} Stuff here</li>
         // );
-        console.log(this.getLocalData);
+        // console.log(this.getLocalData);
         return (
             <div id="container">
                 You have {this.state.container_num} Containers
                 <br/>
-                    {this.state.container_list === null ?  <>Create a Container!</> : this.listContainers()}
+                    {this.state.container_num === 0 ?  <div>Create a Container!</div> : this.listContainers()}
                     
             </div>
         );

@@ -31,7 +31,7 @@ class CreateNew extends Component<{}, MyState> {
     keyPress(event:any) {
         if (event.keyCode === 13) {
             const target = event.target;
-            if (target.value !== '') {
+            if (target.name === 'tmpitems' && target.value !== '') {
                 let newItems = this.state.items;
                 newItems.push(target.value);
                 this.setState({ items: newItems });
@@ -82,11 +82,11 @@ class CreateNew extends Component<{}, MyState> {
                         onChange={this.handleChange}
                         placeholder="The Container Items" />
                     
-                        <Link to="/">
+                        {/* <Link to="/"> */}
                         <input
                             type="submit"
                             value="create" />
-                        </Link>
+                        {/* </Link> */}
                 </label>
             </form>
             </>
